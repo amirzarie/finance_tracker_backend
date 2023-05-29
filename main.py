@@ -50,7 +50,7 @@ async def create_item(item: Item):
 
 
 @app.get("/item")
-async def read_items(q: str | None = Query(None, max_length=10)):
+async def read_items(q: list[str] | None = Query(None, max_length=10)):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:
         results.update({"q": q})

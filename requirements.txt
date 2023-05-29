@@ -1,3 +1,6 @@
-fastapi
+fastapi[all]
 uvicorn[standard]
 pydantic
+passlib[bcrypt]
+SQLAlchemy
+pyjwt
